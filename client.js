@@ -2,7 +2,11 @@ const net = require('net');
 
 // Detail of the server
 const PORT = 50541;
+const HOST = 'localhost';
+/*
+const PORT = 50541;
 const HOST = '135.23.222.131';  // use 'localhost' if you are hosting the server in the same computer
+*/
 
 // Get connected with the server
 const connect = function () {
@@ -36,7 +40,7 @@ const connect = function () {
     
     // If we time them out, one after another, the server will receive and response with the message we sent
     // setTimeout(() => {
-    //   conn.write('Move: up'); 
+    //   conn.write('Move: up');
     // }, 50);
     // setTimeout(() => {
     //   conn.write('Move: up');
