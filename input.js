@@ -25,13 +25,13 @@ const handleUserInput = function (key) {
       connection.write('Move: up');
     }
     if (key === 's') {            // if the input(key) is s, exec the print
-      console.log('down');
+      connection.write('Move: down');
     }
     if (key === 'a') {            // if the input(key) is a, exec the print
-      console.log('left');
+      connection.write('Move: left');
     }
     if (key === 'd') {            // if the input(key) is d, exec the print
-      console.log('right');
+      connection.write('Move: right');
     }
   });
 };
