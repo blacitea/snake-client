@@ -19,6 +19,18 @@ const handleUserInput = function (key) {
       process.exit();
     }
     //process.stdout.write(`Move: ${key}`);
+    if (key === 'w') {            // if the input(key) is w, exec the print
+      console.log('up');
+    }
+    if (key === 's') {            // if the input(key) is s, exec the print
+      console.log('down');
+    }
+    if (key === 'a') {            // if the input(key) is a, exec the print
+      console.log('left');
+    }
+    if (key === 'd') {            // if the input(key) is d, exec the print
+      console.log('right');
+    }
   });
 };
 
