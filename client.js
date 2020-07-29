@@ -25,34 +25,34 @@ const connect = function () {
     // conn.write let you send data (string) to server
     conn.write('Name: BLA'); // send your name to the server
   });
-  conn.on('connect', () => {
-    // conn.write let you send data (string) to server
-    conn.write('Move: up'); // send a movement 'up' to the server as soon as connected
+  // conn.on('connect', () => {
+  //   // conn.write let you send data (string) to server
+  //   conn.write('Move: up'); // send a movement 'up' to the server as soon as connected
     
-    // If we do a list of movement at once, server does not register
-    // conn.write('Move: up');
-    // conn.write('Move: up');
-    // conn.write('Move: up');
-    // conn.write('Move: up');
+  //   // If we do a list of movement at once, server does not register
+  //   // conn.write('Move: up');
+  //   // conn.write('Move: up');
+  //   // conn.write('Move: up');
+  //   // conn.write('Move: up');
     
-    // If we time them out, one after another, the server will receive and response with the message we sent
-    // setTimeout(() => {
-    //   conn.write('Move: up');
-    // }, 50);
-    // setTimeout(() => {
-    //   conn.write('Move: up');
-    // }, 100);
-    // setTimeout(() => {
-    //   conn.write('Move: up');
-    // }, 150);
-    // setTimeout(() => {
-    //   conn.write('Move: up');
-    // }, 200);
-    // setTimeout(() => {
-    //   conn.write('Move: up');
-    // }, 250);
+  //   // If we time them out, one after another, the server will receive and response with the message we sent
+  //   // setTimeout(() => {
+  //   //   conn.write('Move: up');
+  //   // }, 50);
+  //   // setTimeout(() => {
+  //   //   conn.write('Move: up');
+  //   // }, 100);
+  //   // setTimeout(() => {
+  //   //   conn.write('Move: up');
+  //   // }, 150);
+  //   // setTimeout(() => {
+  //   //   conn.write('Move: up');
+  //   // }, 200);
+  //   // setTimeout(() => {
+  //   //   conn.write('Move: up');
+  //   // }, 250);
 
-  });
+  // });
 
   return conn;
 };
