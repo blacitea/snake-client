@@ -21,7 +21,9 @@ const connect = function () {
   // when client connected with server, callback will be executed
   conn.on('connect', () => {
     console.log("You are connected"); // print on client end
-    conn.write('Name: BLA'); // write let you send data (string) to server
+    // conn.write let you send data (string) to server
+    conn.write('Name: BLA'); // send your name to the server
+    conn.write('Move: up'); // send a movement 'up' to the server as soon as connected
   });
 
 
