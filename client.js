@@ -20,7 +20,8 @@ const connect = function () {
   // Event handler!! listening for connection
   // when client connected with server, callback will be executed
   conn.on('connect', () => {
-    console.log("You are connected");
+    console.log("You are connected"); // print on client end
+    conn.write('Name: BLA'); // write let you send data (string) to server
   });
 
 
