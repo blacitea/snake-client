@@ -26,6 +26,10 @@ const handleUserInput = function (key) {
   if (key === 'a') connection.write('Move: left');
   // if the input(key) is d
   if (key === 'd') connection.write('Move: right');
+  // send them some messages
+  if (key === '1') connection.write('Say: Awwwww');
+  if (key === '2') connection.write('Say: Yummy');
+  if (key === '3') connection.write('Say: Hungry Hungry');
 };
 
 let userInput = {
