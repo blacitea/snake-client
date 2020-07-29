@@ -13,23 +13,14 @@ const setupInput = function (conn) {
   return stdin;
 };
 
+const { KEY_BINDING } = require("./constants");
+
 // The callback function to exec, when an input of data from stdin happens (event of stdin)
 const handleUserInput = function (key) {
 //**** This is inside the callback function, with key as input ****/
-  // if the input(key) is Ctrl + C, exec process.exit()
+// if the input(key) is Ctrl + C, exec process.exit()
   if (key === '\u0003') process.exit();
-  // if the input(key) is w
-  if (key === 'w') connection.write('Move: up');
-  // if the input(key) is s
-  if (key === 's') connection.write('Move: down');
-  // if the input(key) is a
-  if (key === 'a') connection.write('Move: left');
-  // if the input(key) is d
-  if (key === 'd') connection.write('Move: right');
-  // send them some messages
-  if (key === '1') connection.write('Say: Awwwww');
-  if (key === '2') connection.write('Say: Yummy');
-  if (key === '3') connection.write('Say: Hungry Hungry');
+  if (KEY_BINDING[key]) connection.write(KEY_BINDING[key]);
 };
 
 let userInput = {
