@@ -12,13 +12,22 @@ const connect = function () {
   });
   // Let the computer know how to interpret incoming data (i.e. as text)
   conn.setEncoding('utf8');
-  // Listen to data from server, and execute callback when event (data from server) happens
+  // Event handler!! listening for data
+  // Listen to data from server, and execute callback when event(data from server) happens
   conn.on('data', (data) => {
     console.log("From server: " + data);
   });
+  // Event handler!! listening for connection
+  // when client connected with server, callback will be executed
+  conn.on('connect', () => {
+    console.log("You are connected");
+  });
+
+
   return conn;
 };
 
+// Export using ES6 object shorthand
 module.exports = {
   connect,
 };
