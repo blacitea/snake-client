@@ -12,7 +12,9 @@ const connect = function () {
   });
   // Let the computer know how to interpret incoming data (i.e. as text)
   conn.setEncoding('utf8');
-
+  conn.on('data', (data) => {
+    console.log("From server: " + data);
+  });
   return conn;
 };
 
