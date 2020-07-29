@@ -1,12 +1,14 @@
 const stdin = process.stdin;
+let connection;
 
 // This let us listen for user input by checking for stdin
-const setupInput = function (input) {
+const setupInput = function (conn) {
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding('utf8');
   stdin.resume();
-  handleUserInput(input);
+  handleUserInput(conn);
   return stdin;
 };
 
@@ -20,7 +22,7 @@ const handleUserInput = function (key) {
     }
     //process.stdout.write(`Move: ${key}`);
     if (key === 'w') {            // if the input(key) is w, exec the print
-      console.log('up');
+      connection.write('Move: up');
     }
     if (key === 's') {            // if the input(key) is s, exec the print
       console.log('down');
